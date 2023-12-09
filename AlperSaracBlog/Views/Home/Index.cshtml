@@ -1,92 +1,424 @@
 ﻿@{
     //ViewData["Title"] = "Home Page";
 }
-<!DOCTYPE html>
+<style>
+    .project-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .img-fluid {
+        display: block;
+    }
+
+    .project-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .img-fluid {
+        display: block;
+        margin-right: 10px; /* Adjust the margin between image and text */
+    }
+
+    .text-container {
+        flex: 1; /* Take up remaining space in the flex container */
+    }
+
+        .text-container p {
+            margin: 0; /* Remove default paragraph margins */
+        }
+
+</style>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta content="description" name="description">
-    <meta name="google" content="notranslate" />
-    <meta content="Mashup templates have been developped by Orson.io team" name="author">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Disable tap highlight on IE -->
-    <meta name="msapplication-tap-highlight" content="no">
+    <title>Marvel HTML Bootstrap 4 Template</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-    <link href="./assets/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/unicons.css">
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css">
 
-    <title>Title page</title>
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="~/assets/css/tooplate-style.css">
 
-    <link href="~/assets/css/main.3f6952e4.css" rel="stylesheet">
+    <!--
+
+    Tooplate 2115 Marvel
+
+    https://www.tooplate.com/view/2115-marvel
+
+    -->
 </head>
+<body>
 
-<body class="minimal">
-    <div id="site-border-left"></div>
-    <div id="site-border-right"></div>
-    <div id="site-border-top"></div>
-    <div id="site-border-bottom"></div>
-    <!-- Add your content of header -->
-    <header>
-        <nav class="navbar  navbar-fixed-top navbar-inverse">
-            <div class="container">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav ">
-                        <li><a href="./index.html" title="">01 : Home</a></li>
-                        <li><a href="./works.html" title="">02 : Works</a></li>
-                        <li><a href="./about.html" title="">03 : About me</a></li>
-                        <li><a href="./contact.html" title="">04 : Contact</a></li>
-                        <li><a href="./components.html" title="">05 : Components</a></li>
-                    </ul>
-
-
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Add your site or app content here -->
-    <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./assets/images/space.jpg')">
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="hero-full-wrapper">
-                        <div class="text-content">
-                            <h1>
-                                Hello,<br>
-                                <span id="typed-strings">
-                                    <span>I'm James Dean</span>
-                                    <span>French Designer</span>
-                                    <span>Working as a Freelance</span>
-                                </span>
-                                <span id="typed"></span>
-                            </h1>
-                        </div>
+
+            <div class="item">
+                <div class="project-info">
+                    <div class="flex-container">
+                        <img src="~/assets/images/project/cactus.png" class="img-fluid">
+                        <a class="navbar-brand" asp-controller="Home" asp-action="Index">Alper Sarac</a>
                     </div>
                 </div>
             </div>
+
+
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                        <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                            <i class="color-mode-icon"></i>
+                            Color mode
+                        </div>
+                    </div>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        @* <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small> *@
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey, I'm</span>
+                            <div class="animated-info">
+                                <span class="animated-item">Alper SARAC</span>
+                                <span class="animated-item">an engineer</span>
+                                <span class="animated-item">a developer</span>
+                            </div>
+                        </h1>
+
+                        <p>An accomplished Software Engineer, possessing five years of expertise in the design and implementation of web and desktop applications.</p>
+
+                        <div class="custom-btn-group mt-4">
+                            <a href="" class="btn mr-lg-2 custom-btn" id="downloadResume"><i class='uil uil-file-alt'></i> Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="~/assets/images/undraw/undraw_software_engineer_lvl5.svg" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    @*  <section class="project py-5" id="project">
+    <div class="container">
+
+    <div class="row">
+    <div class="col-lg-11 text-center mx-auto col-12">
+
+    <div class="col-lg-8 mx-auto">
+    <h2>Things I have designed for digital media agencies</h2>
     </div>
 
+    <div class="owl-carousel owl-theme">
+    <div class="item">
+    <div class="project-info">
+    <img src="~/assets/images/project/project-image01.png" class="img-fluid" alt="project image">
+    </div>
+    </div>
+
+    <div class="item">
+    <div class="project-info">
+    <img src="~/assets/images/project/project-image02.png" class="img-fluid" alt="project image">
+    </div>
+    </div>
+
+    <div class="item">
+    <div class="project-info">
+    <img src="~/assets/images/project/project-image03.png" class="img-fluid" alt="project image">
+    </div>
+    </div>
+
+    <div class="item">
+    <div class="project-info">
+    <img src="~/assets/images/project/project-image04.png" class="img-fluid" alt="project image">
+    </div>
+    </div>
+
+    <div class="item">
+    <div class="project-info">
+    <img src="~/assets/images/project/project-image05.png" class="img-fluid" alt="project image">
+    </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </section> *@
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+                    <h2 class="mb-4">Experiences</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3>
+                                    <span>
+                                        Senior .NET Developer
+                                        <small>
+                                            Asis Electronics,
+                                            Istanbul Turkey
+                                        </small>
+                                    </span>
+
+                                </h3>
+                                <div class="text-container">
+                                    <p>Developed and bug-fixed software modules to improve project quality in an agile environment.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2020</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3>
+                                    <span>.NET Developer</span><small>
+                                        Mobility Pay,
+                                        United Arab Emirates
+                                    </small>
+                                </h3>
+                                <p>Successfully completed projects within schedule, budget, and with desired functionality.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2019</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3>
+                                    <span>
+                                        .NET Developer<br />
+                                        <small>
+                                            Ista,
+                                            Turkey
+                                        </small>
+                                       
+                                    </span>
+                                </h3>
+                                <p>Sed fringilla vitae enim sit amet cursus. Sed cursus dictum tortor quis pharetra. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <h2 class="mb-4 mobile-mt-2">Educations</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2019</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3>
+                                    <span>Firat University</span><small>
+                                        Bachelor’s Degree,
+                                        Computer Engineering
+                                    </small>
+                                </h3>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2018</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3>
+                                    <span>Yalova University</span><small>
+                                        Associate Degree
+                                        Computer Programming
+                                    </small>
+                                </h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-5 mr-lg-5 col-12">
+                    <div class="google-map w-100">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.8885068908!2d28.847376262996395!3d41.00546324246528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1sen!2str!4v1702160575400!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+
+                    <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
+                        <div class="contact-info-item">
+                            <h3 class="mb-3 text-white">Say hello</h3>
+                            <p class="footer-text mb-0">+90 507 299 4259</p>
+                            <p><a href="mailto:alper.sarac42@gmail.com">alper.sarac42@gmail.com</a></p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12 2.247a10 10 0 0 0-3.162 19.487c.5.088.687-.212.687-.475c0-.237-.012-1.025-.012-1.862c-2.513.462-3.163-.613-3.363-1.175a3.636 3.636 0 0 0-1.025-1.413c-.35-.187-.85-.65-.013-.662a2.001 2.001 0 0 1 1.538 1.025a2.137 2.137 0 0 0 2.912.825a2.104 2.104 0 0 1 .638-1.338c-2.225-.25-4.55-1.112-4.55-4.937a3.892 3.892 0 0 1 1.025-2.688a3.594 3.594 0 0 1 .1-2.65s.837-.262 2.75 1.025a9.427 9.427 0 0 1 5 0c1.912-1.3 2.75-1.025 2.75-1.025a3.593 3.593 0 0 1 .1 2.65a3.869 3.869 0 0 1 1.025 2.688c0 3.837-2.338 4.687-4.562 4.937a2.368 2.368 0 0 1 .674 1.85c0 1.338-.012 2.413-.012 2.75c0 .263.187.575.687.475A10.005 10.005 0 0 0 12 2.247Z" />
+                                    
+                                </svg>
+                                <a href="https://github.com/alpersarac" data-toggle="tooltip" data-placement="left" title="Github">my github profile</a>
+                                
+                            </p>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="contact-form">
+                        <h2 class="mb-4">Interested to work together? Let's talk</h2>
+
+                        <form action="" method="get">
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                                </div>
+
+                                <div class="col-12">
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                                </div>
+
+                                <div class="ml-lg-auto col-lg-5 col-12">
+                                    <input type="submit" class="form-control submit-btn" value="Send Button">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center">Copyright &copy; 2024 Alper Sarac. All rights reserved</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            type();
-            movingBackgroundImage();
+        // Attach a click event handler to the downloadResume button
+        $(document).ready(function () {
+            $('#downloadResume').click(function () {
+                // Use JavaScript to create a temporary anchor element
+                var link = document.createElement('a');
+                link.href = 'resume/resume.pdf'; // Update this with the actual path to your resume.pdf
+                link.target = '_blank'; // Open in a new tab/window
+                link.download = 'Alper_Sarac_Resume.pdf'; // Set the downloaded file name
+
+                // Append the anchor element to the document
+                document.body.appendChild(link);
+
+                // Trigger a click event on the anchor element
+                link.click();
+
+                // Remove the temporary anchor element from the document
+                document.body.removeChild(link);
+            });
         });
     </script>
+    <script src="~/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/assets/js/popper.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/Headroom.js"></script>
+    <script src="~/assets/js/jQuery.headroom.js"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <script src="~/assets/js/smoothscroll.js"></script>
+    <script src="~/assets/js/custom.js"></script>
 
 
-    <script type="text/javascript" src="~/assets/css/main.70a66962.js"></script>
 </body>
-
 </html>
 
 
